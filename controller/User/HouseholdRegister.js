@@ -2,20 +2,22 @@ import HouseholdModel from "../../model/Household.js";
 
 export default async (req, res) => {
     try {
-        // const user = new HouseholdModel(req.body);
+
+        const user = req.body;
+
         const householdModel = new HouseholdModel({
-                // user_id: 1,
-                select_role: "Head of Family",
-                firstname: "Raldin",
-                middlename: "Disomimba",
-                lastname: "Casidar",
-                gender: "male",
-                date_of_birth: "2005/01/25",
-                civil_status: "single",
-                year_lived: "5 years",
-                occupation: "software engineer",
-                contact: "09627389508",
-                valid_ids: ['img_01222', 'img_01222', 'img_01222'],
+                
+                select_role: user.select_role,
+                firstname: user.firstname,
+                middlename: user.middlename,
+                lastname: user.lastname,
+                gender: user.gender,
+                date_of_birth: user.date_of_birth,
+                civil_status: user.civil_status,
+                year_lived: user.year_lived,
+                occupation: user.occupation,
+                contact: user.contact,
+                valid_ids: user.valid_ids,
 
                 
         });

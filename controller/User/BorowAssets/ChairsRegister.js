@@ -2,12 +2,12 @@ import ChairsBorrow from "../../../model/BorrowAssets/ChairsBorrow.js";
 
 export default async (req, res) => {
     try {
-        // const user = new ChairsBorrow(req.body);
+        const data = req.body;
         const chairsBorrow = new ChairsBorrow({
-                // user_id: 1,
-                date: '2000-01-01',
-                time: '10:30 PM',
-                purpose_of_borrowing: 'para maka lingkod',
+            
+                date: data.date,
+                time: data.time,
+                purpose_of_borrowing: data.purpose_of_borrowing,
                 
         });
 

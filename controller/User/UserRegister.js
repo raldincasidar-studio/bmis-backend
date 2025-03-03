@@ -2,26 +2,28 @@ import UserModel from "../../model/User.js";;
 
 export default async (req, res) => {
     try {
-        // const user = new UserModel(req.body);
+
+        const userData = req.body;
+
 		const user = new UserModel({
-                firstname: 'Raldin',
-                middlename: 'Disomimba',
-                lastname: 'Casidar',
-                gender: 'male',
-                date_of_birth: '2004/05/13',
-                civil_status: 'married',
-                subdivision: 'Maddison Village',
-                block: 'block 2',
-                lot: 'lot 1',
-                year_lived: '2005',
-                occupation: 'software engineer',
-                voters: 'registered/active',
-                contact: '09357708642',
-                email: 'erljrv.disomimba13@gmail.com',
-                password: 'raldin123',
-                profile: 'img_01222',
-                proof_of_residency: ['img_01222', 'img_01222', 'img_01222'],
-                role: 'admin',
+                firstname: userData.firstname,
+                middlename: userData.middlename,
+                lastname: userData.lastname,
+                gender: userData.gender,
+                date_of_birth: userData.date_of_birth,
+                civil_status: userData.civil_status,
+                subdivision: userData.subdivision,
+                block: userData.block,
+                lot: userData.lot,
+                year_lived: userData.year_lived,
+                occupation: userData.occupation,
+                voters: userData.voters,
+                contact: userData.contact,
+                email: userData.email,
+                password: userData.password,
+                profile: userData.profile,
+                proof_of_residency: userData.proof_of_residency,
+                role: userData.role,
         });
 
 		await user.save();

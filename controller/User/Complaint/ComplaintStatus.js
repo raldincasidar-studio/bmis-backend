@@ -2,9 +2,9 @@ import ComplaintStatus from "../../../model/Complaint/ComplaintStatus.js";
 
 export default async (req, res) => {
     try {
-        // const user = new ComplaintStatus(req.body);
+        const data = req.body;
         const complaintStatus = new ComplaintStatus({
-                set_an_appointment: '10:30 am, Wednesday, February 25, 2025 Permit'    
+                set_an_appointment: data.set_an_appointment, 
         });
 
         await complaintStatus.save();

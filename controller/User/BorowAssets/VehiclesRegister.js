@@ -2,12 +2,12 @@ import VehiclesBorrow from "../../../model/BorrowAssets/VehiclesBorrow.js";
 
 export default async (req, res) => {
     try {
-        // const user = new VehiclesBorrow(req.body);
+        const data = req.body;
         const vehiclesBorrow = new VehiclesBorrow({
-                // user_id: 1,
-                date: '2000-01-01',
-                time: '10:40 PM',
-                purpose_of_borrowing: 'para naay masakyan',
+        
+                date: data.date,
+                time: data.time,
+                purpose_of_borrowing: data.purpose_of_borrowing,
                 
         });
 

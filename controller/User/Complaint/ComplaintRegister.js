@@ -2,13 +2,13 @@ import ComplaintModel from "../../../model/Complaint/Complaint.js";
 
 export default async (req, res) => {
     try {
-        // const user = new ComplaintModel(req.body);
+        const data = req.body;
         const complaint = new ComplaintModel({
-                // user_id: 1,
-                address: 'Dapitan Owaon Purok 5 Kalye 3',
-                date: '2000-01-01',
-                incident_details: 'nalubaan kos lubot',
-                photo_evidence: ['img1', 'img2', 'img3'],
+            
+                address: data.address,
+                date: data.date,
+                incident_details: data.incident_details,
+                photo_evidence: data.photo_evidence,
                 
         });
 

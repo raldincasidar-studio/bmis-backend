@@ -2,12 +2,13 @@ import FeedbackModel from "../../model/Feedback.js";
 
 export default async (req, res) => {
     try {
-        // const user = new FeedbackModel(req.body);
+        const data = req.body;
+
         const feedbackModel = new FeedbackModel({
-                // user_id: 1,
-                feedback: "Your app is so great! Amazing app!",
-                rate: 5,
-                assessment: "Yes",
+
+                feedback: data.feedback,
+                rate: data.rate,
+                assessment: data.assessment,
 
                 
         });
