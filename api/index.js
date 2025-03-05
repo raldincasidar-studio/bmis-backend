@@ -198,12 +198,12 @@ app.delete('/api/admin', AdminController);
 
 
 
-
+export default app;
 
 
 
 
 // Start Server
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Server running on port ${PORT}`);
+// });
