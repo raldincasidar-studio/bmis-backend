@@ -22,25 +22,7 @@ export default async (req, res) => {
         res.status(200).json({
             status: "success",
             message: "Login successfully",
-            userData: {
-                firstname: user.firstname,
-                middlename: user.firstname,
-                lastname: user.firstname,
-                gender: user.gender,
-                date_of_birth: user.date_of_birth,
-                civil_status: user.civil_status,
-                subdivision: user.subdivision,
-                block: user.block,
-                lot: user.lot,
-                year_lived: user.year_lived,
-                occupation: user.occupation,
-                voters: user.voters,
-                contact: user.contact,
-                email: user.email,
-                profile: user.profile,
-                proof_of_residency: user.valid_ids,
-                role: user.role,
-            }
+            userData: user
         });
 
     } catch (error) {
