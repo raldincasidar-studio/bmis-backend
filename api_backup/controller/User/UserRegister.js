@@ -26,10 +26,15 @@ export default async (req, res) => {
                 role: userData.role,
         });
 
-		await user.save();
+        const savedUser = await user.save();
+        
+        // get data from the newly created user
+        const newUserData = await UserModel.findById(savedUser._id);
+
 		res.status(200).json({
 			status: "success",
 			message: "Registered successfully",
+            newUserData: newUserData
 		});
 	} catch (error) {
 		res.status(401).json({
