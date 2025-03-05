@@ -6,6 +6,9 @@ module.exports = {
     filename: 'index.js', // Desired output filename
     path: path.resolve(__dirname, '../api'), // Output directory
   },
+  optimization: {
+    minimize: false, // Disables code minification
+  },
   target: 'node', // Ensure compatibility with Node.js
   mode: 'production', // Set the mode to production for optimization
 };
