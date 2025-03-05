@@ -9,7 +9,7 @@ export default async (req, res) => {
             return res.status(400).json({ error: 'Email and password are required' });
         }
 
-        const user = await UserModel.findOne({ email });
+        const user = await UserModel.findOne({ email, password });
 
         if (!user) {
             return res.status(401).json({ error: 'Invalid email or password' });

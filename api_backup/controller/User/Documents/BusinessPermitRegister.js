@@ -10,9 +10,9 @@ export default async (req, res) => {
         console.log(dataStatus);
 
         const businessStatus = new BusinessPermitStatus({
-                    status: dataStatus.status,
-                    recieved_as: dataStatus.recieved_as,
-                    set_an_appointment: dataStatus.set_an_appointment    
+            status: 'pending',
+            recieved_as: '',
+            set_an_appointment: ''    
         });
 
         const status = await businessStatus.save();
