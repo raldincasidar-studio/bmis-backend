@@ -11,7 +11,7 @@ export default async (req, res) => {
 
         const businessStatus = new BusinessPermitStatus({
             status: 'pending',
-            recieved_as: '',
+            recieved_as: 'pdf',
             set_an_appointment: ''    
         });
 
@@ -31,7 +31,7 @@ export default async (req, res) => {
                 business_address: dataPermit.business_address,
                 nature_of_business: dataPermit.nature_of_business,
                 contact: dataPermit.contact,
-                valid_ids: dataPermit.valid_ids,
+                valid_ids: [],
                 status: status._id,
 
         });

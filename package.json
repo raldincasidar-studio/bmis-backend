@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "vercel dev"
+    "start": "vercel dev",
+    "update": "cd api_backup && webpack && cd .. && git add . && git commit -m 'push auto commit' && git push"
   },
   "author": "",
   "license": "ISC",
